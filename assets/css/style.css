@@ -1,0 +1,156 @@
+:root {
+  /*** Custom colors ***/
+  --ps-logo: #b23375;
+  --white: #fff;
+  --black: #22232b;
+  --grey-e84: #737e84;
+  --grey-txt: #52545b;
+  --bg-main: #e6ebef;
+  --blue: #20a8d8;
+  --orange: #ff8d07;
+}
+
+/***********************************************************************
+  # REUSED
+************************************************************************/
+.main-wrapper {
+  width: 98%;
+  margin: 0 auto;
+}
+
+
+
+
+/***********************************************************************
+  # HEADER
+************************************************************************/
+.header {
+  background: #fff;
+  padding: 20px;
+}
+
+.header__inner-center {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: max-content;
+  display: flex;
+}
+
+.header__personal-acc {
+  width: 40%;
+  font-weight: 700;
+  font-size: 15px;
+
+  padding-top: 10px;
+  padding-left: 3px;
+}
+
+.header__acc-wrapper {
+  display: flex;
+  gap: 60px;
+}
+
+.header__acc-konstantin, .header__acc-finance {
+  display: flex;
+  gap: 12px;
+}
+
+.header__acc-photo-wrapper {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+.header__acc-finance .header__acc-photo-wrapper {
+  background: var(--grey-e84);
+}
+
+.header__acc-photo-img {
+  object-fit: cover;
+}
+
+.header__acc-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header__acc-info-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.header__acc-info-id {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--grey-e84);
+}
+
+/*********** Menu-dots icon ***********/
+.header__menu-dots {
+  display: none;
+  padding-top: 7px;
+}
+
+
+
+
+
+
+
+
+
+/***********************************************************************
+  # Адаптив
+************************************************************************/
+@media only screen and (max-width: 1280px) {
+  .header {
+    padding: 5px;
+  }
+  
+  .header__logo a img {
+    width: 31px;
+    height: 26px;
+  }
+
+  .header__personal-acc {
+    font-size: 8px;
+    padding-top: 7px;
+    padding-left: 5px;
+  }
+
+  .header__acc-photo-wrapper img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__acc-photo-wrapper {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__acc-info-title {
+    font-size: 9px;
+  }
+
+  .header__acc-info-id {
+    font-size: 11px;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .header__acc-wrapper {
+    display: none;
+  }
+
+  .header__menu-dots {
+    display: block;
+  }
+
+}
