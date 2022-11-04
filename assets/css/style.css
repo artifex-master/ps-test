@@ -26,7 +26,8 @@
 ************************************************************************/
 .header {
   background: #fff;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header__inner-center {
@@ -97,8 +98,53 @@
 }
 
 
+/***********************************************************************
+  # MAIN
+************************************************************************/
+.main {
+  width: 100%;
+  position: relative;
+  background: var(--bg-main);
+
+  padding-top: 20px;
+}
+
+/********** Sidebar ************/
+.sidebar {
+  height: 100vh;
+  background: var(--black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px;
+  padding: 26px 28px;
+}
+
+.sidebar-icons-top {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.sidebar-icons__menu-dots img {
+  width: 36px;
+  height: 36px;
+}
+
+.sidebar-icons-bottom {
+  position: absolute;
+  bottom: 26px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
 
 
+.main .main-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
 
 
 
