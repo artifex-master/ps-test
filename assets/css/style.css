@@ -9,6 +9,8 @@
   --blue: #20a8d8;
   --orange: #ff8d07;
   --form-input: #bdcdd6;
+  --grey-resources: #495b65;
+  --disabled-category: #929ba1;
 }
 
 /***********************************************************************
@@ -186,6 +188,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
+
+  margin-bottom: 38px;
 }
 
 .main__form-server-name, .main__form-zone {
@@ -212,6 +216,60 @@
   font-weight: 400;
 }
 
+/***********************************************************************
+  # Сетка с ресурсами
+************************************************************************/
+.resources__title {
+  font-weight: 700;
+  font-size: 31px;
+  color: var(--black);
+
+  margin-bottom: 38px;
+}
+
+.resources__categories-wrapper {
+  padding-bottom: 16px;
+  display: flex;
+  gap: 48px;
+
+  position: relative;
+
+  border-bottom: 1px solid var(--form-input);
+
+  margin-bottom: 25px;
+}
+
+.resources__categories a {
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--grey-resources);
+}
+
+.resources__categories.active:after {
+  content: ' ';
+  position: absolute;
+  top: 32px;
+  left: 0;
+  height: 7px;
+  background: var(--blue);
+  border: 0;
+  width: 160px;
+}
+
+.disabled-category a {
+  color: var(--disabled-category);
+}
+
+/********** Dropdown menu ************/
+.resources-dropdwn-wrapper {
+  display: none;
+}
+
+
+
+
+
+
 
 
 /***********************************************************************
@@ -221,6 +279,63 @@
   .main__form-server-name, .main__form-zone {
     flex: 0 0 45%;
   }
+}
+
+@media only screen and (max-width: 1481px) {
+  .resources__categories {
+    display: none;
+  }
+
+/********** Dropdown menu ************/
+.resources-dropdwn-wrapper {
+  display: block;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-dropdwn {
+  width: max-content;
+  border: 1px solid var(--disabled-category);
+  color: var(--grey-txt);
+  padding: 12px 45px;
+  font-size: 22px;
+
+  display: flex;
+  gap: 14px;
+}
+
+.chevron-down {
+  margin-top: 4px;
+}
+
+.resources-dropdwn {
+  display: none;
+}
+
+.resources-dropdwn a {
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--grey-resources);
+  padding: 12px 5px;
+  background: var(--white);
+}
+
+
+
+.btn-dropdwn.active .chevron-down {
+  transform: rotate(-180deg);
+  transition: 0.25s ease;
+}
+
+.resources-dropdwn-wrapper.active .resources-dropdwn  {
+  display: block;
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+}
+
 }
 
 @media only screen and (max-width: 1440px) {
@@ -305,6 +420,12 @@
   .main__server-name-span {
     font-size: 24px;
   }
+
+
+  .resources__title {
+    font-size: 24px;
+  }
+
 
 
 
